@@ -17,7 +17,7 @@ public:
     }
 
     void AddX(double d) {
-        x += d;  // implicit narrowing conversion
+        x += static_cast<int>(d);  // explicit conversion from double to int
     }
 
     void print() {
