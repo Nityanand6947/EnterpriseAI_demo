@@ -17,7 +17,8 @@ public:
     }
 
     void AddX(double d) {
-        x += d;  // implicit narrowing conversion
+        // x += d;  // implicit narrowing conversion
+        x += static_cast<int>(d);
     }
 
     void print() {
@@ -26,14 +27,20 @@ public:
 
     void dangerousCast() {
         // reinterpret_cast abuse - SCA violation
-        long* lp = reinterpret_cast<long*>(&x);
-        *lp = 1234567890;
+        // long* lp = reinterpret_cast<long*>(&x);
+        // *lp = 1234567890;
+        x = 1234567890; // Direct assignment instead of type punning
     }
 };
 
 int globalFunc(int a, int b) {
     // No input validation or error handling
-    return a / b;  // potential divide by zero
+    // return a / b;  // potential divide by zero
+    if (b == 0) {
+	        // Handle error case, e.g., return an error code or a default value
+	        return 0;  // Or another appropriate error handling strategy
+	    }
+	    return a / b;
 }
 
 int main() {
@@ -45,12 +52,15 @@ int main() {
 
     delete obj;
 
+    // char buffer[5];
+    // strcpy(buffer, "Too long string");  // buffer overflow
     char buffer[5];
-    strcpy(buffer, "Too long string");  // buffer overflow
+	    strncpy(buffer, "Too", sizeof(buffer) - 1); buffer[sizeof(buffer) - 1] = '\0';  // Prevent buffer overflow
 
     cout << buffer << endl;
 
-    int result = globalFunc(10, 0);  // divide by zero
+    // int result = globalFunc(10, 0);  // divide by zero
+    int result = globalFunc(10, 2); // Use a non-zero divisor
 
     cout << "Result: " << result << endl;
 
