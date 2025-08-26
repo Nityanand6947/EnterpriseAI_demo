@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~4\\2019\\PROFES~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /FoCMakeFiles\\EnterprisesAI.dir\\AI_Demo.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\NityanandTamsoy\\Downloads\\EnterprisesAI\\AI_Demo.cpp",
+  "file": "C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/AI_Demo.cpp"
+}
+]

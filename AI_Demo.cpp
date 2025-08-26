@@ -1,41 +1,41 @@
-#include <iostream>
-#include <cstring>
-using namespace std;  
- 
-class Vehicle {
+﻿#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int gGlobalCounter = 0;
+
+class myclass {
 public:
-    int* speed;  
- 
-    Vehicle() {
-        speed = (int*)malloc(sizeof(int)); 
-        *speed = 0;
+    int x;
+
+    myclass(int val) {
+        x = val;
     }
- 
-    void setSpeed(const char* inputSpeed) {
-        char buffer[5];
-        strcpy(buffer, inputSpeed);  
- 
-       
-        *speed = atoi(buffer);
+
+    void AddX(double d) {
+        x += d;
     }
- 
-    void printSpeed() {
-        cout << "Speed is: " << *speed << endl;
-    }
- 
-    ~Vehicle() {
-        free(speed);  
+
+    void print() {
+        cout << "Value: " << x << endl;
     }
 };
- 
+
 int main() {
-    Vehicle v;
-    char input[10];
-    cin >> input; 
- 
-    v.setSpeed(input);
- 
-    v.printSpeed();
- 
-    return 0; 
+    myclass* obj = new myclass(5);
+
+    obj->AddX(3.14);
+
+    obj->print();
+
+    delete obj;
+
+    char buffer[5];
+    strcpy(buffer, "Too long string");
+
+    cout << buffer << endl;
+
+    return 0;
 }

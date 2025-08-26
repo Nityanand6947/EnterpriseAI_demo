@@ -1,0 +1,3 @@
+C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/build/CMakeFiles/EnterprisesAI.dir
+C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/build/CMakeFiles/ZERO_CHECK.dir

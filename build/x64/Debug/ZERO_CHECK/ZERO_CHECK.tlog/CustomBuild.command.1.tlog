@@ -1,0 +1,10 @@
+^C:\USERS\NITYANANDTAMSOY\DOWNLOADS\ENTERPRISESAI\BUILD\CMAKEFILES\CB61B1C76EF9C6CE586B1FD198FEEDD9\GENERATE.STAMP.RULE
+setlocal
+C:\Qt6.5.3\Tools\CMake\bin\cmake.exe -SC:/Users/NityanandTamsoy/Downloads/EnterprisesAI -BC:/Users/NityanandTamsoy/Downloads/EnterprisesAI/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/NityanandTamsoy/Downloads/EnterprisesAI/build/EnterprisesAI.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
